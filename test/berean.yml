@@ -1,0 +1,99 @@
+one:
+  book: Genesis
+  chapter: 1
+  verse: 1
+
+two:
+  book: geneSis
+  chapter: 25
+  verse: 34
+
+three:
+  book: Gen
+  chapter: 50
+  verse: 26
+
+four:
+  book: gene
+  chapter: 42
+  verse: 26
+
+five:
+  book: ExodUs
+  chapter: 5
+  verse: 20
+
+six:
+  book: exOdus
+  chapter: 40
+  verse: 38
+
+seven:
+  book: Exo
+  chapter: 1
+  verse: 20
+
+eight:
+  book: exod
+  chapter: 30
+  verse: 1
+
+nine:
+  book: LEVITICUS
+  chapter: 20
+  verse: 26
+
+ten:
+  book: LevitiCus
+  chapter: 27
+  verse: 30
+
+eleven:
+  book: lev
+  chapter: 2
+  verse: 10
+
+twelve:
+  book: LevI
+  chapter: 12
+  verse: 8
+
+thirteen:
+  book: numbers
+  chapter: 7
+  verse: 80
+
+fourteen:
+  book: NuMbers
+  chapter: 22
+  verse: 41
+
+fifteen:
+  book: NUM
+  chapter: 1
+  verse: 50
+
+sixteen:
+  book: numb
+  chapter: 17
+  verse: 12
+
+seventeen:
+  book: Deuteronomy
+  chapter: 19
+  verse: 20
+
+eighteen:
+  book: DeuTEronomy
+  chapter: 34
+  verse: 12
+
+nineteen:
+  book: deu
+  chapter: 22
+  verse: 20
+
+twenty:
+  book: DEUT
+  chapter: 1
+  verse: 40
