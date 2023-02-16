@@ -1,4 +1,95 @@
-module Berean
+class Berean
+  # From version.rb
   VERSION: String
-  # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+
+  # From constant.rb
+  CONSTANT: Hash[String, [[Integer], [Integer]]]
+
+  # From error.rb
+  class Error < ArgumentError
+  end
+
+  class BookError < ArgumentError
+  end
+
+  class ChapterError < ArgumentError
+  end
+
+  class VerseError < ArgumentError
+  end
+
+  # From passage.rb
+  class << self
+    def many_passages: (mult_psg: String) -> Hash[String, Hash[Integer, [Integer]]]
+
+    def get_book: (mult_psg: String) -> String
+
+    def get_chapter_verse: (mult_psg: String) -> String
+
+    def get_chapter: (chap_vers: String) -> [Integer, String]
+
+    def get_verse: (chp_vrs: String) -> [Integer]
+
+    # From util.rb
+    def num_books: () -> Integer
+
+    def num_chapters: (bk: String) -> Integer
+
+    def num_verses: (bk: String, chp: Integer) -> Integer
+
+    def next_book: (curr_bk: String) -> String
+
+    def previous_book: (curr_bk: String) -> String
+
+    # def norm_book: (bk: String) -> String | nil
+
+    def norm_book: (bk: String) -> String?
+
+    def passage_exist?: (bk: String, chp: Integer, vrs: Integer) -> bool
+    alias exist? passage_exist?
+
+    def random_verse: (bk: String, chp: Integer) -> [String, Integer, Integer]
+
+    # From berean.rb
+    def chapter_one_verse_one: (book: String) -> Berean
+
+    def first_passage: () -> Berean
+    alias first first_passage
+
+    def last_passage: () -> Berean
+    alias last last_passage
+
+    def from_s: (psg: String) -> Berean
+
+    def from_h: (psg: Hash) -> Berean
+
+    # def random_passage: (book: String | nil, chapter: Integer | nil) -> Berean
+
+    def random_passage: () -> Berean
+        | (book: String) -> Berean
+        | (book: String, chapter: Integer) -> Berean
+
+    def passages: (mult_psg: String) -> [Berean]
+  end
+  attr_reader book: String
+  attr_reader chapter: Integer
+  attr_reader verse: Integer
+
+  def initialize: (book: String, chapter: Integer, verse: Integer) -> void
+
+  def to_s: () -> String
+
+  def to_h: () -> Hash
+
+  def eql?: (other: Berean) -> bool
+
+  def next_verse: (wrap: bool) -> Berean
+  alias succ next_verse
+
+  def next_chapter: (wrap: bool) -> Berean
+
+  def previous_verse: (wrap: bool) -> Berean
+  alias pred previous_verse
+
+  def previous_chapter: (wrap: bool) -> Berean
 end
